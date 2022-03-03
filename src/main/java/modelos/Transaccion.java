@@ -1,7 +1,6 @@
 package modelos;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 public class Transaccion implements Serializable{
 
@@ -19,11 +18,11 @@ public class Transaccion implements Serializable{
 		super();
 	}
 
-	public Transaccion(int id, float importe, boolean tipo) {
+	public Transaccion(Cuenta cuenta,float importe, boolean tipo) {
 		super();
-		this.id = id;
 		this.importe = importe;
 		this.tipo = tipo;
+		this.id_cuenta = cuenta;
 
 	}
 
