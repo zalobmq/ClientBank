@@ -1,25 +1,30 @@
 package modelos;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Transaccion {
+public class Transaccion implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	protected int id;
 	protected float importe;
 	protected boolean tipo;
-	protected LocalDate fecha;
 	protected Cuenta id_cuenta;
 
 	public Transaccion() {
 		super();
 	}
 
-	public Transaccion(int id, float importe, boolean tipo, LocalDate fecha) {
+	public Transaccion(int id, float importe, boolean tipo) {
 		super();
 		this.id = id;
 		this.importe = importe;
 		this.tipo = tipo;
-		this.fecha = fecha;
+
 	}
 
 	public int getId() {
@@ -46,14 +51,6 @@ public class Transaccion {
 		this.tipo = tipo;
 	}
 
-	public LocalDate getFecha() {
-		return fecha;
-	}
-
-	public void setFecha(LocalDate fecha) {
-		this.fecha = fecha;
-	}
-	
 
 	public Cuenta getId_cuenta() {
 		return id_cuenta;
@@ -80,7 +77,7 @@ public class Transaccion {
 
 	@Override
 	public String toString() {
-		return "Transaccion [id=" + id + ", importe=" + importe + ", tipo=" + tipo + ", fecha=" + fecha + ", id_cuenta="
+		return "Transaccion [id=" + id + ", importe=" + importe + ", tipo=" + tipo + ", id_cuenta="
 				+ id_cuenta + "]";
 	}
 
