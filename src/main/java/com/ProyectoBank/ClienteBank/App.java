@@ -30,6 +30,7 @@ public class App extends Application {
         Parent p = loadFXML(fxml);
         Scene s = new Scene(p);
         stage.setScene(s);
+        stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("bank.png"))));
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle(title);
         stage.showAndWait();

@@ -13,7 +13,7 @@ public class Usuario implements Serializable{
 	protected String nombre;
 	protected int pin;
 	protected String DNI;
-	protected Admin Admin;
+	protected Admin Admin;//Siempre el 1
 
 	public Usuario() {
 		super();

@@ -60,6 +60,7 @@ public class Connection {
 		try {
 			ObjectInputStream dataInputStream = new ObjectInputStream(server2.getInputStream());
 			try {
+							
 				Admin e = (Admin) dataInputStream.readObject();
 				System.out.println(e);
 			} catch (ClassNotFoundException e) {
