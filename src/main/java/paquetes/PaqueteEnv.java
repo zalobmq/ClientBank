@@ -1,4 +1,5 @@
 package paquetes;
+
 import java.io.Serializable;
 
 public class PaqueteEnv implements Serializable{
